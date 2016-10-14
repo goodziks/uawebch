@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="form-horizontal">
+			<form id="myBodyParams">
+				
+					<div class="form-group">
+						<label for="growth">Введіть ріст</label>
+						<input onkeyup="setParams(this)" name="growth" id="growth" type="text">
+					</div>
+					<div class="form-group">
+						<label for="weight">Введіть масу тіла</label>
+						<input onkeyup="setParams(this)" name="weight" id="weight" type="text">
+					</div>
+					<div style="margin-top: 20px;" class="form-group" hidden id="resultContent">
+						<label for="result">Ваш індекс маси тіла</label>
+						<input type="text" disabled id="result">
+					</div>				
+			</form>
+		</div>
+		<div>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Індекс маси тіла</th>
+						<th>Класифікація</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="first">
+						<td>менше 18,5</td>
+						<td>Недостатня маса</td>
+					</tr>
+					<tr id="second">
+						<td>18,5—24,9</td>
+						<td>Норма</td>
+					</tr>
+					<tr id="third">
+						<td>25,0—29,9</td>
+						<td>Передожиріння</td>
+					</tr>
+					<tr>						
+						<td colspan="2">Гладкість</td>
+					</tr>
+					<tr id="fourth">
+						<td>30,0—34,9</td>
+						<td>Ожиріння I ступеня</td>
+					</tr>
+					<tr id="fifth">
+						<td>35,0—39,9</td>
+						<td>Ожиріння II ступеня</td>
+					</tr>
+					<tr id="sixth">
+						<td>більше 40,0</td>
+						<td>Ожиріння III ступеня</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
